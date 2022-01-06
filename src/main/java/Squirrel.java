@@ -1,14 +1,14 @@
 public class Squirrel {
     int weight;
-    int numbOfConesInNest;
+    int numOfConesInNest;
     int age;
     int height;
 
 
 
-    public Squirrel(int weight, int numbOfConesInNest, int age, int height){
+    public Squirrel(int weight, int numOfConesInNest, int age, int height){
         setWeight(weight);
-        setNumbOfConesInNest(numbOfConesInNest);
+        setNumOfConesInNest(numOfConesInNest);
         setAge(age);
         setHeight(height);
     }
@@ -18,8 +18,8 @@ public class Squirrel {
         this.weight = weight;
     }
 
-    public void setNumbOfConesInNest(int numbOfConesInNest) {
-        this.numbOfConesInNest = numbOfConesInNest;
+    public void setNumOfConesInNest(int numOfConesInNest) {
+        this.numOfConesInNest = numOfConesInNest;
     }
 
     public void setAge(int age) {
@@ -34,8 +34,8 @@ public class Squirrel {
         return weight;
     }
 
-    public int getNumbOfConesInNest() {
-        return numbOfConesInNest;
+    public int getNumOfConesInNest() {
+        return numOfConesInNest;
     }
 
     public int getAge() {
@@ -46,14 +46,17 @@ public class Squirrel {
         return height;
     }
 
-    void eat(int numbOfConesInNest){
-        if(numbOfConesInNest > 0){
+    public int eat(int numOfConesInNest){
+        int conesLeft = numOfConesInNest;
+
+        if(numOfConesInNest > 0){
             System.out.println("Eating cone");
-            this.numbOfConesInNest--;
+            conesLeft --;
         }
         else{
             System.out.println("Go get cones");
         }
+        return conesLeft;
     }
 }
 

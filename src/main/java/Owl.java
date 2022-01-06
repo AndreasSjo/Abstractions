@@ -12,8 +12,15 @@ public class Owl {
         setGender(gender);
     }
 
-    void eat(){
+    public int eat(boolean hungry, int numbOfSquirrels){
+        int numbOfSquirrelsToReturn = numbOfSquirrels;
 
+        if(hungry && numbOfSquirrels > 0){
+            numbOfSquirrelsToReturn--;
+            return numbOfSquirrelsToReturn;
+        }
+        else
+            return numbOfSquirrels;
     }
 
     public void setWingSpan(int wingSpan) {
@@ -26,11 +33,11 @@ public class Owl {
         // Slumpar ett tal mellan 0-1
         int randomInt = rand.nextInt(2);
         // Om talet är 1 så sätts hungry till true
-        if(randomInt > 0){
-            this.hungry = true;
+        if(randomInt == 0){
+            this.hungry = false;
         }
         else
-            this.hungry = false;
+            this.hungry = true;
     }
 
     public void setAge(int age) {

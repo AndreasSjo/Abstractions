@@ -13,6 +13,13 @@ public class Pinetree {
         setNumOfCones(numOfCones);
 
     }
+    public boolean fall(int age, int windspeed, boolean lumberjack){
+        boolean b = false;
+
+
+
+        return b;
+    }
 
     public void setBranches(int branches) {
         this.branches = branches;
@@ -26,9 +33,7 @@ public class Pinetree {
         this.numOfCones = numOfCones;
     }
 
-    public int getBranches() {
-        return branches;
-    }
+    public int getBranches() {return branches;}
 
     public int getAge() {
         return age;
