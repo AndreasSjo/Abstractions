@@ -4,6 +4,16 @@ public class Squirrel {
     int age;
     int height;
 
+
+
+    public Squirrel(int weight, int numbOfConesInNest, int age, int height){
+        setWeight(weight);
+        setNumbOfConesInNest(numbOfConesInNest);
+        setAge(age);
+        setHeight(height);
+    }
+
+
     public void setWeight(int weight) {
         this.weight = weight;
     }
@@ -36,10 +46,10 @@ public class Squirrel {
         return height;
     }
 
-    void eat(){
+    void eat(int numbOfConesInNest){
         if(numbOfConesInNest > 0){
-            System.out.println("eating cone");
-            numbOfConesInNest--;
+            System.out.println("Eating cone");
+            this.numbOfConesInNest--;
         }
         else{
             System.out.println("Go get cones");
