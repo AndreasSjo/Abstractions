@@ -7,19 +7,30 @@ public class Pinetree {
     List<Squirrel> squirrels;
     Owl owl;
 
-    public void Pintetree(int branches, int age, int numOfCones){
+    public Pinetree(){
         setBranches(branches);
         setAge(age);
         setNumOfCones(numOfCones);
-
     }
-    public boolean fall(int age, int windspeed, boolean lumberjack){
-        boolean b = false;
+    public boolean fall(int age, int windspeed, boolean luckyDay){
 
+        boolean treeWillFall = false;
 
+            if (age < 20 && windspeed > 40 && luckyDay == false ){
+                treeWillFall = true;
+            }
+            else if ( age > 20 && windspeed > 25 && luckyDay == false){
+                treeWillFall = true;
+            }
 
-        return b;
+        return treeWillFall;
     }
+
+
+
+
+
+
 
     public void setBranches(int branches) {
         this.branches = branches;
