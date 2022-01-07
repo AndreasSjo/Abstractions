@@ -7,7 +7,7 @@ public class Pinetree {
     List<Squirrel> squirrels;
     Owl owl;
 
-    public void Pintetree(int branches, int age, int numOfCones){
+    public void Pinetree(){
         setBranches(branches);
         setAge(age);
         setNumOfCones(numOfCones);
@@ -15,6 +15,7 @@ public class Pinetree {
     }
     public boolean fall(int age, int windspeed, boolean lumberjack){
         boolean b = false;
+        if (age == 50
 
 
 
