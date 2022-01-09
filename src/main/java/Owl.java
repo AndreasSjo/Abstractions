@@ -14,15 +14,16 @@ public class Owl {
         setGender(gender);
     }
 
-    public int eat(int numbOfSquirrels){
-        int numbOfSquirrelsToReturn = numbOfSquirrels;
+    public String eat(int numbOfSquirrels){
+      String s;
 
         if(numbOfSquirrels > 0){
-            numbOfSquirrelsToReturn--;
-            return numbOfSquirrelsToReturn;
+            s = "Ugglan fick sig en ekorre att äta";
+            return s;
         }
         else
-            return numbOfSquirrels;
+            s = "Ugglan fick sig ingen ekorre till middag";
+            return s;
     }
 
     public void setWingSpan(int wingSpan) {

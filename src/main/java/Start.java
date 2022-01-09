@@ -13,7 +13,7 @@ public class Start {
     public void run(){
 
         pt.setAge(generateRandomNumber(10,100));
-        pt.setNumOfCones(generateRandomNumber(0,50));
+        pt.setNumOfCones(generateRandomNumber(0,15));
         pt.setBranches(generateRandomNumber(0,50));
         squirrelsInTree();
 
@@ -30,15 +30,33 @@ public class Start {
         pt.owl.setHungry();
         pt.owl.setLuckyDay();
 
+
+        System.out.println("I en skog fanns en tall som var " + pt.getAge() +" år gammal.");
+
         if(pt.squirrels.size() == 1){
-            System.out.println("Det var en gång en ekorre som bodde i en skog ");
+            System.out.println("I skogen bodde det en ekorre.");
         }
         else{
-            System.out.println("Det var en gång några ekorrar som bodde i en skog. ");
+            System.out.println("I skogen bodde det några ekorrar");
         }
-        System.out.println(HungrySquirrels.size() + " st av dom hade tomt i skafferiet så de gick till ett träd för att hämta kottar");
 
-            System.out.println("I skogen fanns en tall som var " + pt.getAge() +" år gammal.");
+        if (HungrySquirrels.size()>0){
+             System.out.println(HungrySquirrels.size() + " st av dom hade tomt i skafferiet så de gick till ett träd för att hämta kottar");
+
+            {
+                for (Squirrel s: HungrySquirrels) {
+                    if(s.eat(pt.getNumOfCones()) == true){
+                        System.out.println(s.getName() + " fick äta kottar");
+                    }
+                    else{
+                        System.out.println(s.getName()+ " fick inte äta kottar");
+                    }
+                }
+            }
+
+        }
+
+
 
                 System.out.println("I tallen bodde det en uggla vid namn " + pt.owl.getName() +".");
 
@@ -49,6 +67,8 @@ public class Start {
 
             System.out.println("Till hans stora glädje fick han syn på en ekorre som skuttade runt i hans tall "
             + " på jakt efter kottar. Vilken fest!");
+
+
 
             if(pt.owl.getLuckyDay() == true){
                 System.out.println(pt.owl.getName() + " hade ett himla flax idag och fick sig en ekorre till middag");
@@ -66,19 +86,18 @@ public class Start {
         }
 
         if (pt.fall(pt.getAge(), windspeed, pt.getLuckyDay()) == true){
-            System.out.println("Plötsligt blåste det upp till storm, trädet föll som en fura och " + pt.owl.getName() +  "s liv var i fara!");
+            System.out.println("Plötsligt blåste det upp till storm. Trädet föll som en fura och " + pt.owl.getName() +  "s liv var i fara!");
                 if(pt.owl.getLuckyDay() == true){
                     System.out.println("Men som tur var, så hade " + pt.owl.getName() + " just då flygit ur sitt bo för hans dagliga motionsrunda och klarade sig oskadd");
                 }
                 else if(pt.owl.getLuckyDay() == false){
-                    System.out.println("Våran käre " + pt.owl.getName() + " han tyvär inte flyga ur boet i tid och vilar nu i ugglehimlen");
+                    System.out.println("Våran käre " + pt.owl.getName() + " hann tyvär inte flyga ur boet i tid och vilar nu i ugglehimlen");
                 }
         }
         else{
-            // Vad ska skrivas här om trädet inte faller...
-            System.out.println("testar testar");
-        }
+            System.out.println();
 
+        }
     }
 
     // En metod som lägger till ekorrar i trädet
@@ -86,9 +105,9 @@ public class Start {
 
 
         //Skapar 3 ekorrar
-        Squirrel John = new Squirrel(2, generateRandomNumber(0,1), 5, 25);
-        Squirrel Doe = new Squirrel(2, generateRandomNumber(0,1), 3, 20);
-        Squirrel Dummy = new Squirrel(4,generateRandomNumber(0,1), 4,23);
+        Squirrel John = new Squirrel("John",2, generateRandomNumber(0,1), 5, 25);
+        Squirrel Doe = new Squirrel("Orre",2, generateRandomNumber(0,1), 3, 20);
+        Squirrel Dummy = new Squirrel("Orvar",4,generateRandomNumber(0,1), 4,23);
 
 
         if (numbOfSquirrelsInTree == 0) {
