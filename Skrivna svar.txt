@@ -1,0 +1,8 @@
+Fråga 1:
+Romberna är genomskinliga för att dem två fälten
+List of squirrels och owl är aggregerade egenskaper i
+klassen Pinetree.
+Dvs att ett Pinetree kan existera utan dessa egenskaper.
+Hade dem istället varit essentiella egenskaper hade 
+romberna varit ifyllda svarta då dem varit komponenter
+i ett pinetree.
