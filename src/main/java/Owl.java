@@ -6,6 +6,7 @@ public class Owl {
     int age;
     String gender;
     String name;
+    boolean luckyDay;
 
     public void owl(int wingSpan, int age, String gender){
         setAge(age);
@@ -13,10 +14,10 @@ public class Owl {
         setGender(gender);
     }
 
-    public int eat(boolean hungry, int numbOfSquirrels){
+    public int eat(int numbOfSquirrels){
         int numbOfSquirrelsToReturn = numbOfSquirrels;
 
-        if(hungry && numbOfSquirrels > 0){
+        if(numbOfSquirrels > 0){
             numbOfSquirrelsToReturn--;
             return numbOfSquirrelsToReturn;
         }
@@ -39,6 +40,20 @@ public class Owl {
         }
         else
             this.hungry = true;
+    }
+    public void setLuckyDay(){
+        Random rand = new Random();
+        int randomInt = rand.nextInt(2);
+
+            if(randomInt == 0){
+                this.luckyDay = false;
+            }
+            else {
+                this.luckyDay = true;
+            }
+    }
+    public boolean getLuckyDay(){
+        return this.luckyDay;
     }
 
     public void setAge(int age) {
