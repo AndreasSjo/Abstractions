@@ -5,6 +5,7 @@ public class Owl {
     boolean hungry;
     int age;
     String gender;
+    String name;
 
     public void owl(int wingSpan, int age, String gender){
         setAge(age);
@@ -58,5 +59,13 @@ public class Owl {
 
     public String getGender() {
         return gender;
+    }
+    public boolean getHungry() {return hungry;}
+
+    public void setName(String name){
+        this.name = name;
+    }
+    public String getName(){
+        return this.name;
     }
 }
