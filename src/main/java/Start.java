@@ -1,10 +1,11 @@
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 public class Start {
     Pinetree pt = new Pinetree();
     int windspeed = generateRandomNumber(40);
-    List<Squirrel> HungrySquirrels;
+    List<Squirrel> HungrySquirrels = new ArrayList<Squirrel>();
     // Slumpar först ett tal mellan 0-2
     int numbOfSquirrlesInTree = generateRandomNumber(3);
 

@@ -12,7 +12,7 @@ public class Pinetree {
 
 
     public Pinetree(){
->>>>>>> c1cf119b30d2de4acdff3cdc71dacdc6d54d5795
+
         setBranches(branches);
         setAge(age);
         setNumOfCones(numOfCones);
@@ -20,7 +20,7 @@ public class Pinetree {
 
 
     public boolean fall(int age, int windspeed, boolean luckyDay){
->>>>>>> c1cf119b30d2de4acdff3cdc71dacdc6d54d5795
+
 
         boolean treeWillFall = false;
 
