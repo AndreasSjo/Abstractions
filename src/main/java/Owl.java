@@ -1,12 +1,12 @@
 import java.util.Random;
 
 public class Owl {
-    int wingSpan;
-    boolean hungry;
-    int age;
-    String gender;
-    String name;
-    boolean luckyDay;
+    private int wingSpan;
+    private boolean hungry;
+    private int age;
+    private String gender;
+    private String name;
+    private boolean luckyDay;
 
     public void owl(int wingSpan, int age, String gender){
         setAge(age);

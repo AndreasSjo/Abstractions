@@ -1,9 +1,9 @@
 public class Squirrel {
-    int weight;
-    int numOfConesInNest;
-    int age;
-    int height;
-    String name;
+    private int weight;
+    private int numOfConesInNest;
+    private int age;
+    private int height;
+    private String name;
 
 
 

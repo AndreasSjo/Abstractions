@@ -2,10 +2,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Pinetree {
-    int branches;
-    int age;
-    int numOfCones;
-    boolean luckyDay;
+    private int branches;
+    private int age;
+    private int numOfCones;
+    private boolean luckyDay;
     List<Squirrel> squirrels = new ArrayList<>();
     Owl owl = new Owl();
 
