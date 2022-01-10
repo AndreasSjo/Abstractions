@@ -4,11 +4,11 @@ import java.util.Random;
 
 public class Main {
 
-    Pinetree pt = new Pinetree();
-    int windspeed = generateRandomNumber(0, 40);
-    List<Squirrel> HungrySquirrels = new ArrayList<Squirrel>();
+    private Pinetree pt = new Pinetree();
+    private int windspeed = generateRandomNumber(0, 40);
+    private List<Squirrel> HungrySquirrels = new ArrayList<Squirrel>();
     // Slumpar först ett tal mellan 0-2
-    int numbOfSquirrelsInTree = generateRandomNumber(0, 3);
+    private int numbOfSquirrelsInTree = generateRandomNumber(0, 3);
 
     public static void main(String[] args) {
 
@@ -21,7 +21,7 @@ public class Main {
         m.squirrelsInTree();
 
         for (Squirrel s : m.pt.squirrels) {
-            if (s.numOfConesInNest == 0) {
+            if (s.getNumOfConesInNest() == 0) {
                 m.HungrySquirrels.add(s);
             }
         }
