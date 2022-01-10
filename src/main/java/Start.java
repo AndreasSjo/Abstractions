@@ -34,31 +34,25 @@ public class Start {
         System.out.println("I en skog fanns en tall som var " + pt.getAge() +" år gammal.");
 
         if(pt.squirrels.size() == 1){
-            System.out.println("I skogen bodde det en ekorre.");
+            System.out.println("I skogen bodde det också en ekorre.");
         }
         else{
-            System.out.println("I skogen bodde det några ekorrar");
+            System.out.println("I skogen bodde det också några ekorrar");
         }
 
         if (HungrySquirrels.size()>0){
              System.out.println(HungrySquirrels.size() + " st av dom hade tomt i skafferiet så de gick till ett träd för att hämta kottar");
+                String hungryNames = "";
 
-            {
                 for (Squirrel s: HungrySquirrels) {
-                    if(s.eat(pt.getNumOfCones()) == true){
-                        System.out.println(s.getName() + " fick äta kottar");
-                    }
-                    else{
-                        System.out.println(s.getName()+ " fick inte äta kottar");
-                    }
+                    hungryNames = hungryNames.concat(s.getName() + " ");
                 }
-            }
-
+            System.out.println(hungryNames + "hade tur och hittade kottar vid tallen idag.");
         }
 
 
 
-                System.out.println("I tallen bodde det en uggla vid namn " + pt.owl.getName() +".");
+                System.out.println("I tallen bodde det även en uggla vid namn " + pt.owl.getName() +".");
 
                     System.out.print("En dag vaknade " + pt.owl.getName());
 
