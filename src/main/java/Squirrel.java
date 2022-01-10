@@ -51,13 +51,25 @@ public class Squirrel {
     }
 
     public boolean eat(int numOfConesInTree){
+        boolean canEat;
+
+        if(numOfConesInTree > 0){
+            canEat = true;
+        }
+
+        else{
+            canEat = false;
+        }
+        return canEat;
+    }
+   /* public boolean eat(int numOfConesInTree){
         boolean eating = true;
 
         if( numOfConesInTree < 5){
             eating = false;
         }
         return eating;
-    }
+    }*/
 }
 
 
