@@ -2,14 +2,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Pinetree {
-    int branches;
-    int age;
-    int numOfCones;
-    List<Squirrel> squirrels = new ArrayList<Squirrel>();
+
+
+
+    private int branches;
+    private int age;
+    private int numOfCones;
+    private boolean luckyDay;
+    List<Squirrel> squirrels = new ArrayList<>();
     Owl owl = new Owl();
-
-
-
 
     public Pinetree(){
 
@@ -34,11 +35,9 @@ public class Pinetree {
         return treeWillFall;
     }
 
-
-
-
-
-
+    public void setLuckyDay(boolean luckyDay){
+        this.luckyDay = luckyDay;
+    }
 
     public void setBranches(int branches) {
         this.branches = branches;
@@ -61,4 +60,5 @@ public class Pinetree {
     public int getNumOfCones() {
         return numOfCones;
     }
+    public boolean getLuckyDay(){return luckyDay;}
 }

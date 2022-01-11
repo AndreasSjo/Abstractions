@@ -1,16 +1,18 @@
 public class Squirrel {
-    int weight;
-    int numOfConesInNest;
-    int age;
-    int height;
+    private int weight;
+    private int numOfConesInNest;
+    private int age;
+    private int height;
+    private String name;
 
 
 
-    public Squirrel(int weight, int numOfConesInNest, int age, int height){
+    public Squirrel(String name, int weight, int numOfConesInNest, int age, int height){
         setWeight(weight);
         setNumOfConesInNest(numOfConesInNest);
         setAge(age);
         setHeight(height);
+        setName(name);
     }
 
 
@@ -29,6 +31,8 @@ public class Squirrel {
     public void setHeight(int height) {
         this.height = height;
     }
+    public void setName(String name){this.name = name;}
+    public String getName(){return name;}
 
     public int getWeight() {
         return weight;
@@ -46,18 +50,26 @@ public class Squirrel {
         return height;
     }
 
-    public int eat(int numOfConesInNest){
-        int conesLeft = numOfConesInNest;
+    public boolean eat(int numOfConesInTree){
+        boolean canEat;
 
-        if(numOfConesInNest > 0){
-            System.out.println("Eating cone");
-            conesLeft --;
+        if(numOfConesInTree > 0){
+            canEat = true;
         }
+
         else{
-            System.out.println("Go get cones");
+            canEat = false;
         }
-        return conesLeft;
+        return canEat;
     }
+   /* public boolean eat(int numOfConesInTree){
+        boolean eating = true;
+
+        if( numOfConesInTree < 5){
+            eating = false;
+        }
+        return eating;
+    }*/
 }
 
 
