@@ -6,3 +6,8 @@ Dvs att ett Pinetree kan existera utan dessa egenskaper.
 Hade dem istället varit essentiella egenskaper hade 
 romberna varit ifyllda svarta då dem varit komponenter
 i ett pinetree.
+
+INLUPP 2
+Fråga 1: 
+Pilspetsarna från Owl och Squirrel innebär att dom förlänger Animal
+och ärvar alla Animals metoder och variabler
