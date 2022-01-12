@@ -32,16 +32,20 @@ public class Pinetree {
         this.luckyDay = luckyDay;
     }
 
-    public void setBranches(int branches) {
-        this.branches = branches;
+    public void setBranches(int branchesInput) {
+
+        this.branches = branchesInput;
+
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setAge(int ageInput) {
+
+            this.age = ageInput;
+
     }
 
-    public void setNumOfCones(int numOfCones) {
-        this.numOfCones = numOfCones;
+    public void setNumOfCones(int numOfConesInput) {
+        this.numOfCones = numOfConesInput;
     }
 
     public int getBranches() {return branches;}

@@ -1,10 +1,10 @@
-public class Squirrel {
+public class Squirrel extends Animal {
     private int weight;
     private int numOfConesInNest;
     private int age;
     private int height;
     private String name;
-
+    Cone cone = new Cone();
 
 
     public Squirrel(String name, int weight, int numOfConesInNest, int age, int height){
@@ -15,7 +15,6 @@ public class Squirrel {
         setName(name);
     }
 
-
     public void setWeight(int weight) {
         this.weight = weight;
     }
@@ -24,14 +23,12 @@ public class Squirrel {
         this.numOfConesInNest = numOfConesInNest;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     public void setHeight(int height) {
         this.height = height;
     }
+
     public void setName(String name){this.name = name;}
+
     public String getName(){return name;}
 
     public int getWeight() {
@@ -42,34 +39,21 @@ public class Squirrel {
         return numOfConesInNest;
     }
 
-    public int getAge() {
-        return age;
-    }
-
     public int getHeight() {
         return height;
     }
 
-    public boolean eat(int numOfConesInTree){
-        boolean canEat;
 
-        if(numOfConesInTree > 0){
-            canEat = true;
-        }
-
-        else{
-            canEat = false;
-        }
-        return canEat;
+    @Override
+    public boolean eat(Object food) {
+        if (food instanceof Cone) {
+            if (((Cone) food).edible = true) {
+                return true;
+            } else
+                return false;
+        } else
+            return false;
     }
-   /* public boolean eat(int numOfConesInTree){
-        boolean eating = true;
-
-        if( numOfConesInTree < 5){
-            eating = false;
-        }
-        return eating;
-    }*/
 }
 
 

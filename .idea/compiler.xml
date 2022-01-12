@@ -6,6 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="HelloWorld (1)" />
+        <module name="HelloWorld-service" />
+      </profile>
+      <profile name="Annotation profile for HelloWorld" enabled="true">
+        <sourceOutputDir name="HelloWorld-domain/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="HelloWorld-domain/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
         <module name="HelloWorld" />
       </profile>
     </annotationProcessing>

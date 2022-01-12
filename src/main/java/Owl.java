@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Owl {
+public class Owl extends Animal{
     private int wingSpan;
     private boolean hungry;
     private int age;
@@ -20,11 +20,8 @@ public class Owl {
         return s;
     }
 
-    public void setWingSpan(int wingSpan) {
-        this.wingSpan = wingSpan;
-    }
+    public void setWingSpan(int wingSpan) {this.wingSpan = wingSpan;}
 
-    // Metod för att avgöra om ugglan är hungrig eller inte
     public void setHungry() {
         Random rand = new Random();
         // Slumpar ett tal mellan 0-1
@@ -51,10 +48,6 @@ public class Owl {
         return this.luckyDay;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     public void setGender(String gender) {
         this.gender = gender;
     }
@@ -63,19 +56,34 @@ public class Owl {
         return wingSpan;
     }
 
-    public int getAge() {
-        return age;
-    }
-
     public String getGender() {
         return gender;
     }
+
     public boolean getHungry() {return hungry;}
 
     public void setName(String name){
         this.name = name;
     }
+
     public String getName(){
         return this.name;
     }
+
+    @Override
+    public boolean eat(Object food) {
+        Random random = new Random();
+        boolean owlGetsToEat = random.nextBoolean();
+
+        if (food instanceof Squirrel){
+            if (owlGetsToEat == true) {
+                return true;
+            }
+            else
+                return false;
+        }
+        else
+            return false;
+    }
 }
+
