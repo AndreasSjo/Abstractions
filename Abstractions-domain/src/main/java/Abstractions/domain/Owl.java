@@ -1,21 +1,21 @@
+package Abstractions.domain;
+
 import java.util.Random;
 
-public class Owl {
+public class Owl extends Animal {
     private int wingSpan;
-    private boolean hungry;
-    private int age;
     private String gender;
     private String name;
     private boolean luckyDay;
 
-    public void owl(int wingSpan, int age, String gender){
+    public void owl(int wingSpan, int age, String gender) {
         setAge(age);
         setWingSpan(wingSpan);
         setGender(gender);
     }
 
-    public String eat(String name){
-      String s;
+    public String eat(String name) {
+        String s;
         s = name + " hade ett himla flax idag och fick sig en ekorre till middag";
         return s;
     }
@@ -30,24 +30,17 @@ public class Owl {
         // Slumpar ett tal mellan 0-1
         int randomInt = rand.nextInt(2);
         // Om talet är 1 så sätts hungry till true
-        if(randomInt == 0){
-            this.hungry = false;
-        }
-        else
-            this.hungry = true;
+        this.hungry = randomInt != 0;
     }
-    public void setLuckyDay(){
+
+    public void setLuckyDay() {
         Random rand = new Random();
         int randomInt = rand.nextInt(2);
 
-            if(randomInt == 0){
-                this.luckyDay = false;
-            }
-            else {
-                this.luckyDay = true;
-            }
+        this.luckyDay = randomInt != 0;
     }
-    public boolean getLuckyDay(){
+
+    public boolean getLuckyDay() {
         return this.luckyDay;
     }
 
@@ -70,12 +63,24 @@ public class Owl {
     public String getGender() {
         return gender;
     }
-    public boolean getHungry() {return hungry;}
 
-    public void setName(String name){
+    public boolean getHungry() {
+        return hungry;
+    }
+
+    public void setName(String name) {
         this.name = name;
     }
-    public String getName(){
+
+    public String getName() {
         return this.name;
+    }
+
+    @Override
+    boolean eat(Object food){
+        if (food instanceof Squirrel){
+            return true;
+        }
+        return false;
     }
 }

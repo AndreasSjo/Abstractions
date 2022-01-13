@@ -1,3 +1,5 @@
+package Abstractions.domain;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -10,10 +12,10 @@ public class Main {
     // Slumpar först ett tal mellan 0-2
     private int numbOfSquirrelsInTree = generateRandomNumber(0, 3);
 
+
     public static void main(String[] args) {
 
         Main m = new Main();
-
 
         m.pt.setAge(m.generateRandomNumber(10, 100));
         m.pt.setNumOfCones(m.generateRandomNumber(0, 15));
@@ -42,9 +44,17 @@ public class Main {
             System.out.println("I skogen bodde det också några ekorrar");
         }
 
-
+/*      if (m.HungrySquirrels.get(0).eat(m.pt.getNumOfCones()) == true) {
+                System.out.println("De hade tur och hittade tillräckligt med kottar för dagens måltid och vinterns förråd.");
+            }*/
         if (m.HungrySquirrels.size() > 0) {
-            System.out.println(m.HungrySquirrels.size() + " st av dom hade tomt i skafferiet så de gick till ett träd för att hämta kottar");
+            System.out.println(m.HungrySquirrels.size() + " st av dom hade tomt i skafferiet så de gick ut i skogen "
+                                                                +"för att leta mat");
+            /*for (Squirrels s : pt.squirrels){
+                 if (s.nutExist = true)
+            }
+             */
+
 
       // Här anropas squirrel.eat()
             if(m.HungrySquirrels.get(0).eat(m.pt.getNumOfCones()) == true){

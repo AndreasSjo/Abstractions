@@ -6,7 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Abstractions" />
+        <module name="Abstractions-domain" />
+        <module name="Abstractions-service" />
         <module name="HelloWorld" />
       </profile>
     </annotationProcessing>

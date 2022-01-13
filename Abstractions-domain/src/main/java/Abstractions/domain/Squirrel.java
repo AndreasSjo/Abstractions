@@ -1,9 +1,10 @@
-public class Squirrel {
-    private int weight;
+package Abstractions.domain;
+
+public class Squirrel extends Animal {
     private int numOfConesInNest;
-    private int age;
     private int height;
     private String name;
+    nut n = new nut();
 
 
 
@@ -13,6 +14,7 @@ public class Squirrel {
         setAge(age);
         setHeight(height);
         setName(name);
+        n.setNut();
     }
 
 
@@ -62,14 +64,12 @@ public class Squirrel {
         }
         return canEat;
     }
-   /* public boolean eat(int numOfConesInTree){
-        boolean eating = true;
-
-        if( numOfConesInTree < 5){
-            eating = false;
+    @Override
+    boolean eat(Object food) {
+        if (food instanceof nut) {
+            return true;
         }
-        return eating;
-    }*/
+            return false;
+    }
 }
-
 
