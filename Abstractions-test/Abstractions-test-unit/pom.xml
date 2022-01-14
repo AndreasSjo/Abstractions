@@ -5,11 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>HelloWorld</artifactId>
         <groupId>org.andreas</groupId>
+        <artifactId>Abstractions-test</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>Abstractions-domain</artifactId>
+    <artifactId>Abstractions-test-unit</artifactId>
     <packaging>jar</packaging>
+
+
 </project>

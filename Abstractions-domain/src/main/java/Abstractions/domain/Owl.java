@@ -77,10 +77,17 @@ public class Owl extends Animal {
     }
 
     @Override
-    boolean eat(Object food){
-        if (food instanceof Squirrel){
-            return true;
-        }
-        return false;
+    boolean eat(Object food) {
+        Random random = new Random();
+        boolean owlGetsToEat = random.nextBoolean();
+
+
+        if (food instanceof Squirrel) {
+            if (owlGetsToEat == true) {
+                return true;
+            } else
+                return false;
+        } else
+            return false;
     }
 }

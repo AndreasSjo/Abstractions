@@ -4,7 +4,7 @@ public class Squirrel extends Animal {
     private int numOfConesInNest;
     private int height;
     private String name;
-    nut n = new nut();
+    Cone cone = new Cone();
 
 
 
@@ -14,7 +14,6 @@ public class Squirrel extends Animal {
         setAge(age);
         setHeight(height);
         setName(name);
-        n.setNut();
     }
 
 
@@ -52,7 +51,7 @@ public class Squirrel extends Animal {
         return height;
     }
 
-    public boolean eat(int numOfConesInTree){
+    /* public boolean eat(int numOfConesInTree){
         boolean canEat;
 
         if(numOfConesInTree > 0){
@@ -63,13 +62,15 @@ public class Squirrel extends Animal {
             canEat = false;
         }
         return canEat;
-    }
+    }*/
     @Override
     boolean eat(Object food) {
-        if (food instanceof nut) {
-            return true;
-        }
+        if (food instanceof Cone) {
+            if(((Cone)food).edible == true) {
+                return true;
+            } else
+                return false;
+        }else
             return false;
     }
 }
-

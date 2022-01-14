@@ -1,0 +1,6 @@
+Abstractions\domain\Cone.class
+Abstractions\domain\Owl.class
+Abstractions\domain\Squirrel.class
+Abstractions\domain\Animal.class
+Abstractions\domain\Main.class
+Abstractions\domain\Pinetree.class

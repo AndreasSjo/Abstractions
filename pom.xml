@@ -33,6 +33,7 @@
     <modules>
         <module>Abstractions-domain</module>
         <module>Abstractions-service-impl</module>
+        <module>Abstractions-test</module>
     </modules>
 
     <dependencyManagement>
