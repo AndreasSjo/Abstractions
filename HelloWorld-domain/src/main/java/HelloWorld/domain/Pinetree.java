@@ -9,7 +9,6 @@ public class Pinetree {
     private int numOfCones;
     private boolean luckyDay;
     List<Squirrel> squirrels = new ArrayList<>();
-    Owl owl = new Owl();
 
     public Pinetree(){
         setBranches(branches);

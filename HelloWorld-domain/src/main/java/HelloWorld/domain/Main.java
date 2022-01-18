@@ -1,6 +1,8 @@
 package HelloWorld.domain;
 
+import java.util.InputMismatchException;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
 
@@ -19,12 +21,22 @@ public class Main {
         m.pt.setBranches(m.generateRandomNumber(0, 50));
         m.squirrelsInTree();
 
-        m.pt.owl.setGender("male");
-        m.pt.owl.setName("Urban");
-        m.pt.owl.setWingSpan(20);
-        m.pt.owl.setAge(10);
-        m.pt.owl.setHungry();
-        m.pt.owl.setLuckyDay();
+        Owl owl = new Owl(20, "Male", "Urban");
+/*
+        Scanner sc = new Scanner(System.in);
+
+        while (true){
+            System.out.println("Ange en ålder på Urban");
+                try{
+                    m.owl.setAge(sc.nextInt());
+                    sc.close();
+                    break;
+                }catch (InputMismatchException e){
+                    System.out.println("Ange bara ett tal i siffror");
+                }
+        }*/
+        owl.setHungry();
+        owl.setLuckyDay();
 
 
         System.out.println("I en skog fanns en tall som var " + m.pt.getAge() + " år gammal.");
@@ -50,16 +62,16 @@ public class Main {
         }
 
 
-        System.out.println("I tallen bodde det även en uggla vid namn " + m.pt.owl.getName() + ".");
+        System.out.println("I tallen bodde det även en uggla vid namn " + owl.getName() + ".");
 
-        System.out.print("En dag vaknade " + m.pt.owl.getName());
+        System.out.print("En dag vaknade " + owl.getName());
 
-        if (m.pt.owl.getHungry()){
+        if (owl.getHungry()){
             System.out.print(" och var hungrig.\n");
             if(m.hungrySquirrels > 0){
                 System.out.println("Till hans stora glädje fick han syn på en ekorre som skuttade runt i hans tall "
                         + " på jakt efter kottar. Vilken fest! Tänkte urban");
-                if(m.pt.owl.eat(m.pt.squirrels.get(0))){
+                if(owl.eat(m.pt.squirrels.get(0))){
                     System.out.println("Urban hade en himla tur och lyckades fånga en stackars ekorre till middag");
                 }
                 else {
@@ -76,11 +88,11 @@ public class Main {
 
         //Här anropas pinetree.fall()
         if (m.pt.fall(m.pt.getAge(), m.windspeed, m.pt.getLuckyDay())) {
-            System.out.println("Plötsligt blåste det upp till storm. Trädet föll som en fura och " + m.pt.owl.getName() + "s liv var i fara!");
-            if (m.pt.owl.getLuckyDay()) {
-                System.out.println("Men som tur var, så hade " + m.pt.owl.getName() + " just då flygit ur sitt bo för hans dagliga motionsrunda och klarade sig oskadd.");
-            } else if (!m.pt.owl.getLuckyDay()) {
-                System.out.println("Våran käre " + m.pt.owl.getName() + " hann tyvär inte flyga ur boet i tid och vilar nu i ugglehimlen.");
+            System.out.println("Plötsligt blåste det upp till storm. Trädet föll som en fura och " + owl.getName() + "s liv var i fara!");
+            if (owl.getLuckyDay()) {
+                System.out.println("Men som tur var, så hade " + owl.getName() + " just då flygit ur sitt bo för hans dagliga motionsrunda och klarade sig oskadd.");
+            } else if (!owl.getLuckyDay()) {
+                System.out.println("Våran käre " + owl.getName() + " hann tyvär inte flyga ur boet i tid och vilar nu i ugglehimlen.");
             }
         } else {
             System.out.println();
