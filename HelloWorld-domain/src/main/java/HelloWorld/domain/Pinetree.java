@@ -1,18 +1,25 @@
-
+<<<<<<<< HEAD:Abstractions-domain/src/main/java/Abstractions/domain/Pinetree.java
 package Abstractions.domain;
-
+========
+package HelloWorld.domain;
+>>>>>>>> 6f556a433dae78b6c4096cb513ca950ccb55e65f:HelloWorld-domain/src/main/java/HelloWorld/domain/Pinetree.java
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Pinetree {
+<<<<<<<< HEAD:Abstractions-domain/src/main/java/Abstractions/domain/Pinetree.java
 
+
+
+========
+>>>>>>>> 6f556a433dae78b6c4096cb513ca950ccb55e65f:HelloWorld-domain/src/main/java/HelloWorld/domain/Pinetree.java
     private int branches;
     private int age;
     private int numOfCones;
     private boolean luckyDay;
     List<Squirrel> squirrels = new ArrayList<>();
-
+    Owl owl = new Owl();
 
     public Pinetree(){
 

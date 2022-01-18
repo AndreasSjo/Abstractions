@@ -1,7 +1,14 @@
-
+<<<<<<<< HEAD:Abstractions-domain/src/main/java/Abstractions/domain/Squirrel.java
 package Abstractions.domain;
 
-
+public class Squirrel extends Animal {
+    private int numOfConesInNest;
+    private int height;
+    private String name;
+    Cone cone = new Cone();
+========
+package HelloWorld.domain;
+>>>>>>>> 6f556a433dae78b6c4096cb513ca950ccb55e65f:HelloWorld-domain/src/main/java/HelloWorld/domain/Squirrel.java
 
 public class Squirrel extends Animal {
     private int weight;
@@ -48,7 +55,31 @@ public class Squirrel extends Animal {
         return height;
     }
 
+<<<<<<<< HEAD:Abstractions-domain/src/main/java/Abstractions/domain/Squirrel.java
+    /* public boolean eat(int numOfConesInTree){
+        boolean canEat;
 
+        if(numOfConesInTree > 0){
+            canEat = true;
+        }
+
+        else{
+            canEat = false;
+        }
+        return canEat;
+    }*/
+    @Override
+    boolean eat(Object food) {
+        if (food instanceof Cone) {
+            if(((Cone)food).edible == true) {
+                return true;
+            } else
+                return false;
+        }else
+            return false;
+    }
+}
+========
 
     @Override
     public boolean eat(Object food) {
@@ -63,4 +94,4 @@ public class Squirrel extends Animal {
 }
 
 
-
+>>>>>>>> 6f556a433dae78b6c4096cb513ca950ccb55e65f:HelloWorld-domain/src/main/java/HelloWorld/domain/Squirrel.java

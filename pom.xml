@@ -4,15 +4,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.andreas</groupId>
+
     <artifactId>HelloWorld</artifactId>
+    <groupId>org.andreas</groupId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+
         <!-- plugins -->
+
         <maven.clean.plugin.version>2.5</maven.clean.plugin.version>
         <maven.compiler.plugin.version>3.5</maven.compiler.plugin.version>
         <maven.dependency.plugin.version>2.9</maven.dependency.plugin.version>
@@ -26,10 +29,10 @@
         <maven.resources.plugin.version>3.0.1</maven.resources.plugin.version>
         <maven.revapi.plugin.version>0.12.1</maven.revapi.plugin.version>
         <maven.surefire.plugin.version>2.19.1</maven.surefire.plugin.version>
-
-   <!-- versions -->
+        <!-- versions -->
         <junit.version>4.13.1</junit.version>
     </properties>
+
     <modules>
         <module>Abstractions-domain</module>
         <module>Abstractions-service</module>
@@ -41,15 +44,32 @@
         <dependencies>
             <dependency>
                 <groupId>org.andreas</groupId>
-                <artifactId>HelloWorld</artifactId>
+                <artifactId>Abstractions-domain</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
             <dependency>
+                <groupId>org.andreas</groupId>
+                <artifactId>Abstractions-service</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>org.andreas</groupId>
+                <artifactId>Abstractions-service-impl</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>org.andreas</groupId>
+                <artifactId>Abstractions-test</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/junit/junit -->
+            <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>${junit.version}</version>
+                <version>4.13.1</version>
                 <scope>test</scope>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -64,6 +84,7 @@
                 <filtering>true</filtering>
             </resource>
         </resources>
+
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -130,6 +151,4 @@
             </plugins>
         </pluginManagement>
     </build>
-
-
 </project>

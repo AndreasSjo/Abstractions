@@ -1,5 +1,12 @@
-
+<<<<<<<< HEAD:Abstractions-domain/src/main/java/Abstractions/domain/Owl.java
 package Abstractions.domain;
+
+import java.util.Random;
+
+public class Owl extends Animal {
+    private int wingSpan;
+========
+package HelloWorld.domain;
 
 import java.util.Random;
 
@@ -7,6 +14,7 @@ public class Owl extends Animal{
     private int wingSpan;
     private boolean hungry;
     private int age;
+>>>>>>>> 6f556a433dae78b6c4096cb513ca950ccb55e65f:HelloWorld-domain/src/main/java/HelloWorld/domain/Owl.java
     private String gender;
     private String name;
     private boolean luckyDay;
@@ -55,7 +63,11 @@ public class Owl extends Animal{
     public String getGender() {
         return gender;
     }
+<<<<<<<< HEAD:Abstractions-domain/src/main/java/Abstractions/domain/Owl.java
+========
 
+    public boolean getHungry() {return hungry;}
+>>>>>>>> 6f556a433dae78b6c4096cb513ca950ccb55e65f:HelloWorld-domain/src/main/java/HelloWorld/domain/Owl.java
 
     public boolean getHungry() {
         return hungry;
@@ -65,13 +77,28 @@ public class Owl extends Animal{
         this.name = name;
     }
 
-
+<<<<<<<< HEAD:Abstractions-domain/src/main/java/Abstractions/domain/Owl.java
+    public String getName() {
+========
     public String getName(){
+>>>>>>>> 6f556a433dae78b6c4096cb513ca950ccb55e65f:HelloWorld-domain/src/main/java/HelloWorld/domain/Owl.java
         return this.name;
     }
 
     @Override
+<<<<<<<< HEAD:Abstractions-domain/src/main/java/Abstractions/domain/Owl.java
+    boolean eat(Object food) {
+        Random random = new Random();
+        boolean owlGetsToEat = random.nextBoolean();
 
+
+        if (food instanceof Squirrel) {
+            if (owlGetsToEat == true) {
+                return true;
+            } else
+                return false;
+        } else
+========
     public boolean eat(Object food) {
         Random random = new Random();
         boolean owlGetsToEat = random.nextBoolean();
@@ -84,6 +111,7 @@ public class Owl extends Animal{
                 return false;
         }
         else
+>>>>>>>> 6f556a433dae78b6c4096cb513ca950ccb55e65f:HelloWorld-domain/src/main/java/HelloWorld/domain/Owl.java
             return false;
     }
 }
