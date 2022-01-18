@@ -9,7 +9,7 @@ public class Owl extends Animal{
     private String name;
     private boolean luckyDay;
 
-    public Owl(int wingSpan,String gender ,String name){
+    public Owl(int wingSpan, String gender ,String name){
         setWingSpan(wingSpan);
         setGender(gender);
         setName(name);

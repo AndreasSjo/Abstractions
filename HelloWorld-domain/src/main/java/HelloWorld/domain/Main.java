@@ -16,7 +16,6 @@ public class Main {
 
         Main m = new Main();
 
-
         m.pt.setAge(m.generateRandomNumber(10, 100));
         m.pt.setNumOfCones(m.generateRandomNumber(0, 15));
         m.pt.setBranches(m.generateRandomNumber(0, 50));
@@ -26,8 +25,7 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-
-            while(true) {
+         while (true) {
                 try {
                     System.out.println("Ange en ålder på Urban");
                     owl.setAge(sc.nextInt());
