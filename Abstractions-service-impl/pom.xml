@@ -18,6 +18,10 @@
             <artifactId>Abstractions-domain</artifactId>
 
         </dependency>
+        <dependency>
+            <groupId>org.andreas</groupId>
+            <artifactId>Abstractions-service</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

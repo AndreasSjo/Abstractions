@@ -6,22 +6,17 @@ import java.util.Random;
 public class Owl extends Animal{
     private int wingSpan;
     private boolean hungry;
-    private int age;
     private String gender;
     private String name;
     private boolean luckyDay;
 
-    public void owl(int wingSpan, int age, String gender) {
-        setAge(age);
+    public Owl(int wingSpan, String gender, String name) {
         setWingSpan(wingSpan);
         setGender(gender);
+        setName(name);
     }
 
-    public String eat(String name) {
-        String s;
-        s = name + " hade ett himla flax idag och fick sig en ekorre till middag";
-        return s;
-    }
+
 
     public void setWingSpan(int wingSpan) {this.wingSpan = wingSpan;}
 
