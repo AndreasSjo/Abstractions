@@ -1,7 +1,7 @@
 package HelloWorld.domain;
 
 public abstract class Animal {
-    int age;
+   protected int age;
 
     public abstract boolean eat(Object food);
 

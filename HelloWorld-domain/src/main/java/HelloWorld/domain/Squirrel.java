@@ -3,7 +3,6 @@ package HelloWorld.domain;
 public class Squirrel extends Animal {
     private int weight;
     private int numOfConesInNest;
-    private int age;
     private int height;
     private String name;
     Cone cone = new Cone();
