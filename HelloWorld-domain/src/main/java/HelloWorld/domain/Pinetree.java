@@ -4,27 +4,33 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Pinetree {
+
     private int branches;
     private int age;
     private int numOfCones;
     private boolean luckyDay;
-    List<Squirrel> squirrels = new ArrayList<>();
 
-    public Pinetree(){
-        setBranches(branches);
+
+
+    public Pinetree(int age){
+
+
         setAge(age);
-        setNumOfCones(numOfCones);
+
     }
+
+
     public boolean fall(int age, int windspeed, boolean luckyDay){
+
 
         boolean treeWillFall = false;
 
-            if (age < 20 && windspeed > 40 && luckyDay == false ){
-                treeWillFall = true;
-            }
-            else if ( age > 20 && windspeed > 25 && luckyDay == false){
-                treeWillFall = true;
-            }
+        if (age < 20 && windspeed > 40 && luckyDay == false ){
+            treeWillFall = true;
+        }
+        else if ( age > 20 && windspeed > 25 && luckyDay == false){
+            treeWillFall = true;
+        }
 
         return treeWillFall;
     }
@@ -41,7 +47,7 @@ public class Pinetree {
 
     public void setAge(int ageInput) {
 
-            this.age = ageInput;
+        this.age = ageInput;
 
     }
 
