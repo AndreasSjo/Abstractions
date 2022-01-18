@@ -32,6 +32,7 @@
     </properties>
     <modules>
         <module>Abstractions-domain</module>
+        <module>Abstractions-service</module>
         <module>Abstractions-service-impl</module>
         <module>Abstractions-test</module>
     </modules>

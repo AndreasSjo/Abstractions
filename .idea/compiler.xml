@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Abstractions-domain" />
         <module name="Abstractions-test-unit" />
+        <module name="Abstractions-service" />
         <module name="Abstractions-service-impl" />
       </profile>
     </annotationProcessing>
