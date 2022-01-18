@@ -9,6 +9,7 @@ public class Cone {
         public void setEdible(){
             Random random = new Random();
             boolean tempEdible = random.nextBoolean();
+            this.edible = tempEdible;
         }
 
 

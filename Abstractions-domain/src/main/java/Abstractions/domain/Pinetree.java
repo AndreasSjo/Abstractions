@@ -11,14 +11,14 @@ public class Pinetree {
     private int age;
     private int numOfCones;
     private boolean luckyDay;
-    List<Squirrel> squirrels = new ArrayList<>();
 
 
-    public Pinetree(){
 
-        setBranches(branches);
+    public Pinetree(int age){
+
+
         setAge(age);
-        setNumOfCones(numOfCones);
+
     }
 
 
