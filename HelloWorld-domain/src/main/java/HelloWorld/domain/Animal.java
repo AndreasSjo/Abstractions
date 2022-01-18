@@ -1,3 +1,5 @@
+package HelloWorld.domain;
+
 public abstract class Animal {
     int age;
 

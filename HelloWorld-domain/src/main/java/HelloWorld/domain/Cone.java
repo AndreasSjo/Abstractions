@@ -1,3 +1,5 @@
+package HelloWorld.domain;
+
 import java.util.Random;
 
 public class Cone {
