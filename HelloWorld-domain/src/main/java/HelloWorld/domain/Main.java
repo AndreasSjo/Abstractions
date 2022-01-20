@@ -18,6 +18,7 @@ import java.util.Scanner;
 
 
             Owl owl = new Owl(25 , "male", "Urban");
+
             Squirrel squirrel = new Squirrel("Orre", 7, 4, 10);
             Pinetree pt = new Pinetree(m.generateRandomNumber(10,100));
 
