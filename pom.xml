@@ -36,6 +36,8 @@
         <module>HelloWorld-service</module>
         <module>HelloWorld-service-impl</module>
         <module>HelloWorld-test</module>
+        <module>HelloWorld-dao</module>
+        <module>HelloWorld-dao-impl</module>
     </modules>
 
     <dependencyManagement>

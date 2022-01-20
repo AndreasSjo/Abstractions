@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="HelloWorld-dao" />
         <module name="HelloWorld-domain" />
+        <module name="HelloWorld-service-impl" />
         <module name="HelloWorld-test-unit" />
         <module name="HelloWorld (1)" />
-        <module name="HelloWorld-service-impl" />
+        <module name="HelloWorld-dao-impl" />
         <module name="HelloWorld-service" />
       </profile>
     </annotationProcessing>
