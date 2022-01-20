@@ -14,9 +14,6 @@ import java.util.Scanner;
 
             Main m = new Main();
 
-
-
-
             Owl owl = new Owl(25 , "male", "Urban");
 
             Squirrel squirrel = new Squirrel("Orre", 7, 4, 10);

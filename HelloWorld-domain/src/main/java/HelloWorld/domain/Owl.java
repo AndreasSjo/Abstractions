@@ -17,7 +17,13 @@ public class Owl extends Animal{
 
 
 
-    public void setWingSpan(int wingSpan) {this.wingSpan = wingSpan;}
+    public void setWingSpan(int wingSpan) {
+        if(wingSpan > 0)
+        this.wingSpan = wingSpan;
+        else{
+            System.out.println("only positive integer input");
+        }
+    }
 
     public void setHungry() {
         Random rand = new Random();
