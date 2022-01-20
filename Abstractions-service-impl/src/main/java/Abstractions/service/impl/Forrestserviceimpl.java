@@ -5,10 +5,8 @@ import Abstractions.service.Forrestservice;
 
 public class Forrestserviceimpl implements Forrestservice {
 
-
-    @Override
-    public Owl createOwl(int wingspan, String gender, String name) {
-        Owl owl = new Owl(wingspan, gender, name);
+    public Owl createOwl(int wingSpan, String gender, String name){
+        Owl owl = new Owl(wingSpan, gender, name);
         return owl;
     }
 

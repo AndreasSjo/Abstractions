@@ -1,8 +1,6 @@
 package Abstractions.domain;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class Main {
 
@@ -17,10 +15,24 @@ public class Main {
 
 
 
-        Owl owl = new Owl(25 , "male", "Urban");
+        Owl owl = new Owl(25,"Male","Urban");
         Squirrel squirrel = new Squirrel("Orre", 7, 4, 10);
         Pinetree pt = new Pinetree(m.generateRandomNumber(10,100));
 
+        Scanner sc = new Scanner(System.in);
+
+        while (true) {
+            try {
+                System.out.println("Ange en ålder på Urban");
+                owl.setAge(sc.nextInt());
+                sc.close();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Ange bara ett tal i siffror");
+                sc.nextLine();
+                continue;
+            }
+        }
 
         squirrel.cone.setEdible();
         owl.setHungry();
