@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class ForestDaoImpl implements ForestDao {
-    Connection con = null;
+    Connection connection = null;
     Statement statement = null;
 
     @Override
@@ -25,7 +25,15 @@ public class ForestDaoImpl implements ForestDao {
 
     @Override
     public Squirrel createSquirrel(String name, int weight, int age, int height) {
-        return null;
+        try {
+            connection = getConnection();
+            statement = connection.prepareStatement("INSERT INTO Squirrel(name, weight, age, height) VALUES ()");
+
+        }catch (SQLException sqlException){
+            System.err.println(sqlException);
+        }
+
+        return new Squirrel(name, weight, age, height);
     }
 
     @Override
