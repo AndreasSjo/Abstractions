@@ -1,6 +1,5 @@
 package HelloWorld.dao;
 
-import HelloWorld.dao.ForestDao;
 import HelloWorld.domain.Owl;
 import HelloWorld.domain.Pinetree;
 import HelloWorld.domain.Squirrel;
@@ -14,7 +13,8 @@ public class ForestDaoImpl implements ForestDao {
     Connection con = null;
     Statement statement = null;
 
-    public Connection getCon() throws SQLException {
+    @Override
+    public Connection getConnection() throws SQLException {
         return DriverManager.getConnection("jdbc:mysql://localhost:3306/stidb", "sti" ,"sti");
     }
 
@@ -32,4 +32,5 @@ public class ForestDaoImpl implements ForestDao {
     public Pinetree createPinetree(int age) {
         return null;
     }
+
 }
