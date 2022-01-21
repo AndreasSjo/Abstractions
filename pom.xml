@@ -39,6 +39,10 @@
         <module>Abstractions-service</module>
         <module>Abstractions-service-impl</module>
         <module>Abstractions-test</module>
+        <module>Abstractions-dao</module>
+
+        <module>Abstractions-dao-impl</module>
+
     </modules>
 
     <dependencyManagement>

@@ -7,7 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Abstractions-domain" />
+        <module name="Abstractions-dao" />
         <module name="Abstractions-test-unit" />
+        <module name="Abstractions-dao-impl" />
         <module name="Abstractions-service" />
         <module name="Abstractions-service-impl" />
       </profile>
