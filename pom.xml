@@ -29,6 +29,7 @@
         <maven.surefire.plugin.version>2.19.1</maven.surefire.plugin.version>
         <junit.version>4.13.1</junit.version>
         <spring.version>5.3.13</spring.version>
+        <mysql.version>8.0.28</mysql.version>
     </properties>
 
     <modules>
@@ -45,6 +46,16 @@
             <dependency>
                 <groupId>org.andreas</groupId>
                 <artifactId>HelloWorld-domain</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.andreas</groupId>
+                <artifactId>HelloWorld-dao</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.andreas</groupId>
+                <artifactId>HelloWorld-dao-impl</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -112,6 +123,13 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-jcl</artifactId>
                 <version>${spring.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
             </dependency>
 
 

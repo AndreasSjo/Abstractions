@@ -13,6 +13,17 @@
     <packaging>jar</packaging>
     <artifactId>HelloWorld-dao-impl</artifactId>
 
+    <dependencies>
+        <dependency>
+                <groupId>org.andreas</groupId>
+                <artifactId>HelloWorld-dao</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+    </dependencies>
 
 
 </project>

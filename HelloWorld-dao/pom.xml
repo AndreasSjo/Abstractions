@@ -13,6 +13,11 @@
     <packaging>jar</packaging>
     <artifactId>HelloWorld-dao</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>org.andreas</groupId>
+            <artifactId>HelloWorld-domain</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

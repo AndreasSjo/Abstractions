@@ -49,6 +49,17 @@
             <artifactId>HelloWorld-service-impl</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.andreas</groupId>
+            <artifactId>HelloWorld-dao</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.andreas</groupId>
+            <artifactId>HelloWorld-dao-impl</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
     </dependencies>
 
     
