@@ -6,18 +6,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="HelloWorld-dao" />
-        <module name="HelloWorld-domain" />
-        <module name="HelloWorld-service-impl" />
-        <module name="HelloWorld-test-unit" />
+        <module name="Abstractions-dao" />
+        <module name="Abstractions-test-unit" />
+        <module name="Abstractions-dao-impl" />
+        <module name="Abstractions-domain" />
+        <module name="Abstractions-service" />
         <module name="HelloWorld (1)" />
-        <module name="HelloWorld-dao-impl" />
-        <module name="HelloWorld-service" />
+        <module name="Abstractions-service-impl" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="HelloWorld-abstractions-test-unit" target="1.8" />
+      <module name="HelloWorld-domain" target="1.8" />
       <module name="HelloWorld-domain (1)" target="8" />
+      <module name="HelloWorld-service" target="1.8" />
+      <module name="HelloWorld-service-impl" target="1.8" />
+      <module name="HelloWorld-test" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

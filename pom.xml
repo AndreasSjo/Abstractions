@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
 
-    <artifactId>HelloWorld</artifactId>
+    <artifactId>Abstractions</artifactId>
     <groupId>org.andreas</groupId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -33,44 +33,44 @@
     </properties>
 
     <modules>
-        <module>HelloWorld-domain</module>
-        <module>HelloWorld-service</module>
-        <module>HelloWorld-service-impl</module>
-        <module>HelloWorld-test</module>
-        <module>HelloWorld-dao</module>
-        <module>HelloWorld-dao-impl</module>
+        <module>Abstractions-domain</module>
+        <module>Abstractions-service</module>
+        <module>Abstractions-service-impl</module>
+        <module>Abstractions-test</module>
+        <module>Abstractions-dao</module>
+        <module>Abstractions-dao-impl</module>
     </modules>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.andreas</groupId>
-                <artifactId>HelloWorld-domain</artifactId>
+                <artifactId>Abstractions-domain</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.andreas</groupId>
-                <artifactId>HelloWorld-dao</artifactId>
+                <artifactId>Abstractions-dao</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.andreas</groupId>
-                <artifactId>HelloWorld-dao-impl</artifactId>
+                <artifactId>Abstractions-dao-impl</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.andreas</groupId>
-                <artifactId>HelloWorld-service</artifactId>
+                <artifactId>Abstractions-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.andreas</groupId>
-                <artifactId>HelloWorld-service-impl</artifactId>
+                <artifactId>Abstractions-service-impl</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.andreas</groupId>
-                <artifactId>HelloWorld-test</artifactId>
+                <artifactId>Abstractions-test</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <!-- https://mvnrepository.com/artifact/junit/junit -->
