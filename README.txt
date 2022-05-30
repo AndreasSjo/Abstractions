@@ -1,1 +1,1 @@
-Please Read Me!
+Abstractions and dependency management
